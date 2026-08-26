@@ -1,6 +1,6 @@
 // ==========================================================
-// CONVERT CHECK NOW
-// MAIN JAVASCRIPT FILE
+// CONVERT EVERYTHING
+// COMPLETE JAVASCRIPT
 // ==========================================================
 
 
@@ -16,8 +16,6 @@ const units = {
 
   length: {
     name: "Length",
-    base: "meter",
-
     units: {
       millimeter: { name: "Millimeter", factor: 0.001 },
       centimeter: { name: "Centimeter", factor: 0.01 },
@@ -38,8 +36,6 @@ const units = {
 
   area: {
     name: "Area",
-    base: "squareMeter",
-
     units: {
       squareMillimeter: { name: "Square Millimeter", factor: 0.000001 },
       squareCentimeter: { name: "Square Centimeter", factor: 0.0001 },
@@ -61,8 +57,6 @@ const units = {
 
   mass: {
     name: "Weight & Mass",
-    base: "gram",
-
     units: {
       milligram: { name: "Milligram", factor: 0.001 },
       gram: { name: "Gram", factor: 1 },
@@ -84,7 +78,6 @@ const units = {
   temperature: {
     name: "Temperature",
     special: true,
-
     units: {
       celsius: { name: "Celsius" },
       fahrenheit: { name: "Fahrenheit" },
@@ -99,8 +92,6 @@ const units = {
 
   volume: {
     name: "Volume",
-    base: "liter",
-
     units: {
       milliliter: { name: "Milliliter", factor: 0.001 },
       liter: { name: "Liter", factor: 1 },
@@ -126,8 +117,6 @@ const units = {
 
   time: {
     name: "Time",
-    base: "second",
-
     units: {
       millisecond: { name: "Millisecond", factor: 0.001 },
       second: { name: "Second", factor: 1 },
@@ -145,8 +134,6 @@ const units = {
 
   speed: {
     name: "Speed",
-    base: "meterPerSecond",
-
     units: {
       meterPerSecond: { name: "Meters per Second", factor: 1 },
       kilometerPerHour: {
@@ -175,8 +162,6 @@ const units = {
 
   pressure: {
     name: "Pressure",
-    base: "pascal",
-
     units: {
       pascal: { name: "Pascal", factor: 1 },
       kilopascal: { name: "Kilopascal", factor: 1000 },
@@ -196,22 +181,14 @@ const units = {
 
   energy: {
     name: "Energy",
-    base: "joule",
-
     units: {
       joule: { name: "Joule", factor: 1 },
       kilojoule: { name: "Kilojoule", factor: 1000 },
       calorie: { name: "Calorie", factor: 4.184 },
       kilocalorie: { name: "Kilocalorie", factor: 4184 },
       wattHour: { name: "Watt-hour", factor: 3600 },
-      kilowattHour: {
-        name: "Kilowatt-hour",
-        factor: 3600000
-      },
-      btu: {
-        name: "BTU",
-        factor: 1055.05585262
-      },
+      kilowattHour: { name: "Kilowatt-hour", factor: 3600000 },
+      btu: { name: "BTU", factor: 1055.05585262 },
       electronvolt: {
         name: "Electronvolt",
         factor: 1.602176634e-19
@@ -226,8 +203,6 @@ const units = {
 
   power: {
     name: "Power",
-    base: "watt",
-
     units: {
       watt: { name: "Watt", factor: 1 },
       kilowatt: { name: "Kilowatt", factor: 1000 },
@@ -250,8 +225,6 @@ const units = {
 
   digital: {
     name: "Digital Storage",
-    base: "byte",
-
     units: {
       bit: { name: "Bit", factor: 0.125 },
       byte: { name: "Byte", factor: 1 },
@@ -260,7 +233,6 @@ const units = {
       gigabyte: { name: "Gigabyte (GB)", factor: 1000000000 },
       terabyte: { name: "Terabyte (TB)", factor: 1000000000000 },
       petabyte: { name: "Petabyte (PB)", factor: 1000000000000000 },
-
       kibibyte: { name: "Kibibyte (KiB)", factor: 1024 },
       mebibyte: { name: "Mebibyte (MiB)", factor: 1048576 },
       gibibyte: { name: "Gibibyte (GiB)", factor: 1073741824 },
@@ -275,11 +247,12 @@ const units = {
 
   angle: {
     name: "Angle",
-    base: "degree",
-
     units: {
       degree: { name: "Degree", factor: 1 },
-      radian: { name: "Radian", factor: 57.29577951308232 },
+      radian: {
+        name: "Radian",
+        factor: 57.29577951308232
+      },
       gradian: { name: "Gradian", factor: 0.9 },
       arcminute: { name: "Arcminute", factor: 1 / 60 },
       arcsecond: { name: "Arcsecond", factor: 1 / 3600 }
@@ -293,49 +266,39 @@ const units = {
 
   cooking: {
     name: "Cooking",
-    base: "milliliter",
-
     units: {
       teaspoon: {
         name: "Teaspoon",
         factor: 4.92892159375
       },
-
       tablespoon: {
         name: "Tablespoon",
         factor: 14.78676478125
       },
-
       fluidOunce: {
         name: "US Fluid Ounce",
         factor: 29.5735295625
       },
-
       cup: {
         name: "US Cup",
         factor: 236.5882365
       },
-
       pint: {
         name: "US Pint",
         factor: 473.176473
       },
-
       quart: {
         name: "US Quart",
         factor: 946.352946
       },
-
       gallon: {
         name: "US Gallon",
         factor: 3785.411784
       },
-
       milliliter: {
         name: "Milliliter",
         factor: 1
       },
-
       liter: {
         name: "Liter",
         factor: 1000
@@ -372,7 +335,6 @@ function convertTemperature(value, from, to) {
     celsius = value - 273.15;
   }
 
-
   if (to === "celsius") {
     return celsius;
   }
@@ -398,23 +360,32 @@ function convertTemperature(value, from, to) {
 // SECTION 3 — PAGE ELEMENTS
 // ==========================================================
 
-const categorySelect = document.getElementById("category");
+const categorySelect =
+  document.getElementById("category");
 
-const fromUnitSelect = document.getElementById("fromUnit");
+const fromUnitSelect =
+  document.getElementById("fromUnit");
 
-const toUnitSelect = document.getElementById("toUnit");
+const toUnitSelect =
+  document.getElementById("toUnit");
 
-const inputValue = document.getElementById("inputValue");
+const inputValue =
+  document.getElementById("inputValue");
 
-const resultBox = document.getElementById("result");
+const resultBox =
+  document.getElementById("result");
 
-const swapButton = document.getElementById("swapButton");
+const swapButton =
+  document.getElementById("swapButton");
 
-const copyButton = document.getElementById("copyButton");
+const copyButton =
+  document.getElementById("copyButton");
 
-const clearButton = document.getElementById("clearButton");
+const clearButton =
+  document.getElementById("clearButton");
 
-const copyMessage = document.getElementById("copyMessage");
+const copyMessage =
+  document.getElementById("copyMessage");
 
 
 // ==========================================================
@@ -431,17 +402,21 @@ function loadCategories() {
 
   categorySelect.innerHTML = "";
 
-  Object.entries(units).forEach(([key, category]) => {
+  Object.entries(units).forEach(
+    ([key, category]) => {
 
-    const option = document.createElement("option");
+      const option =
+        document.createElement("option");
 
-    option.value = key;
+      option.value = key;
 
-    option.textContent = category.name;
+      option.textContent =
+        category.name;
 
-    categorySelect.appendChild(option);
+      categorySelect.appendChild(option);
 
-  });
+    }
+  );
 
 }
 
@@ -458,34 +433,45 @@ function loadCategories() {
 
 function loadUnits() {
 
-  const category = units[categorySelect.value];
+  const category =
+    units[categorySelect.value];
 
   fromUnitSelect.innerHTML = "";
 
   toUnitSelect.innerHTML = "";
 
 
-  Object.entries(category.units).forEach(([key, unit]) => {
+  Object.entries(category.units).forEach(
+    ([key, unit]) => {
 
-    const fromOption = document.createElement("option");
+      const fromOption =
+        document.createElement("option");
 
-    fromOption.value = key;
+      fromOption.value = key;
 
-    fromOption.textContent = unit.name;
-
-
-    const toOption = document.createElement("option");
-
-    toOption.value = key;
-
-    toOption.textContent = unit.name;
+      fromOption.textContent =
+        unit.name;
 
 
-    fromUnitSelect.appendChild(fromOption);
+      const toOption =
+        document.createElement("option");
 
-    toUnitSelect.appendChild(toOption);
+      toOption.value = key;
 
-  });
+      toOption.textContent =
+        unit.name;
+
+
+      fromUnitSelect.appendChild(
+        fromOption
+      );
+
+      toUnitSelect.appendChild(
+        toOption
+      );
+
+    }
+  );
 
 
   if (toUnitSelect.options.length > 1) {
@@ -512,7 +498,8 @@ function loadUnits() {
 
 function calculate() {
 
-  const value = parseFloat(inputValue.value);
+  const value =
+    parseFloat(inputValue.value);
 
 
   if (Number.isNaN(value)) {
@@ -524,11 +511,14 @@ function calculate() {
   }
 
 
-  const category = units[categorySelect.value];
+  const category =
+    units[categorySelect.value];
 
-  const from = fromUnitSelect.value;
+  const from =
+    fromUnitSelect.value;
 
-  const to = toUnitSelect.value;
+  const to =
+    toUnitSelect.value;
 
 
   let result;
@@ -536,31 +526,40 @@ function calculate() {
 
   if (category.special) {
 
-    result = convertTemperature(value, from, to);
+    result =
+      convertTemperature(
+        value,
+        from,
+        to
+      );
 
   }
 
   else {
 
     const baseValue =
-      value * category.units[from].factor;
+      value *
+      category.units[from].factor;
 
     result =
-      baseValue / category.units[to].factor;
+      baseValue /
+      category.units[to].factor;
 
   }
 
 
   if (!Number.isFinite(result)) {
 
-    resultBox.textContent = "Invalid result";
+    resultBox.textContent =
+      "Invalid result";
 
     return;
 
   }
 
 
-  resultBox.textContent = formatNumber(result);
+  resultBox.textContent =
+    formatNumber(result);
 
 }
 
@@ -578,29 +577,32 @@ function calculate() {
 function formatNumber(number) {
 
   if (number === 0) {
-
     return "0";
-
   }
 
 
-  const absolute = Math.abs(number);
+  const absolute =
+    Math.abs(number);
 
 
-  if (absolute >= 1e12 || absolute < 1e-9) {
+  if (
+    absolute >= 1e12 ||
+    absolute < 1e-9
+  ) {
 
     return number.toExponential(8);
 
   }
 
 
-  return Number(number.toPrecision(12))
-    .toLocaleString(
-      undefined,
-      {
-        maximumFractionDigits: 10
-      }
-    );
+  return Number(
+    number.toPrecision(12)
+  ).toLocaleString(
+    undefined,
+    {
+      maximumFractionDigits: 10
+    }
+  );
 
 }
 
@@ -615,21 +617,28 @@ function formatNumber(number) {
 // SECTION 8 — SWAP BUTTON
 // ==========================================================
 
-swapButton.addEventListener("click", () => {
+swapButton.addEventListener(
+  "click",
+  () => {
 
-  const oldFrom = fromUnitSelect.value;
+    const oldFrom =
+      fromUnitSelect.value;
 
-  const oldTo = toUnitSelect.value;
-
-
-  fromUnitSelect.value = oldTo;
-
-  toUnitSelect.value = oldFrom;
+    const oldTo =
+      toUnitSelect.value;
 
 
-  calculate();
+    fromUnitSelect.value =
+      oldTo;
 
-});
+    toUnitSelect.value =
+      oldFrom;
+
+
+    calculate();
+
+  }
+);
 
 
 // ==========================================================
@@ -676,17 +685,20 @@ inputValue.addEventListener(
 // SECTION 10 — CLEAR BUTTON
 // ==========================================================
 
-clearButton.addEventListener("click", () => {
+clearButton.addEventListener(
+  "click",
+  () => {
 
-  inputValue.value = "";
+    inputValue.value = "";
 
-  resultBox.textContent = "0";
+    resultBox.textContent = "0";
 
-  copyMessage.textContent = "";
+    copyMessage.textContent = "";
 
-  inputValue.focus();
+    inputValue.focus();
 
-});
+  }
+);
 
 
 // ==========================================================
@@ -699,67 +711,75 @@ clearButton.addEventListener("click", () => {
 // SECTION 11 — COPY RESULT
 // ==========================================================
 
-copyButton.addEventListener("click", async () => {
+copyButton.addEventListener(
+  "click",
+  async () => {
 
-  const value = parseFloat(inputValue.value);
+    const value =
+      parseFloat(inputValue.value);
 
 
-  if (Number.isNaN(value)) {
+    if (Number.isNaN(value)) {
 
-    copyMessage.textContent =
-      "Enter a value first.";
+      copyMessage.textContent =
+        "Enter a value first.";
 
-    return;
+      return;
+
+    }
+
+
+    const result =
+      resultBox.textContent;
+
+
+    const category =
+      units[categorySelect.value];
+
+
+    const fromName =
+      category.units[
+        fromUnitSelect.value
+      ].name;
+
+
+    const toName =
+      category.units[
+        toUnitSelect.value
+      ].name;
+
+
+    const text =
+      `${formatNumber(value)} ${fromName} = ${result} ${toName}`;
+
+
+    try {
+
+      await navigator.clipboard
+        .writeText(text);
+
+      copyMessage.textContent =
+        "Copied!";
+
+    }
+
+    catch {
+
+      copyMessage.textContent =
+        "Unable to copy automatically.";
+
+    }
+
+
+    setTimeout(
+      () => {
+        copyMessage.textContent = "";
+      },
+      2500
+    );
 
   }
-
-
-  const result = resultBox.textContent;
-
-
-  const fromName =
-    units[
-      categorySelect.value
-    ].units[
-      fromUnitSelect.value
-    ].name;
-
-
-  const toName =
-    units[
-      categorySelect.value
-    ].units[
-      toUnitSelect.value
-    ].name;
-
-
-  const text =
-    `${formatNumber(value)} ${fromName} = ${result} ${toName}`;
-
-
-  try {
-
-    await navigator.clipboard.writeText(text);
-
-    copyMessage.textContent = "Copied!";
-
-  }
-
-  catch {
-
-    copyMessage.textContent =
-      "Unable to copy automatically.";
-
-  }
-
-
-  setTimeout(() => {
-
-    copyMessage.textContent = "";
-
-  }, 2500);
-
-});
+);
 
 
 // ==========================================================
@@ -776,29 +796,42 @@ document
   .querySelectorAll(".category-card")
   .forEach(card => {
 
-    card.addEventListener("click", () => {
+    card.addEventListener(
+      "click",
+      () => {
 
-      const category =
-        card.dataset.category;
+        const category =
+          card.dataset.category;
 
 
-      if (units[category]) {
+        if (!units[category]) {
+          return;
+        }
+
 
         categorySelect.value =
           category;
 
+
         loadUnits();
 
 
-        document
-          .getElementById("converter")
-          .scrollIntoView({
+        const converter =
+          document.getElementById(
+            "converter"
+          );
+
+
+        if (converter) {
+
+          converter.scrollIntoView({
             behavior: "smooth"
           });
 
-      }
+        }
 
-    });
+      }
+    );
 
   });
 
@@ -862,45 +895,58 @@ document
   .querySelectorAll("[data-conversion]")
   .forEach(button => {
 
-    button.addEventListener("click", () => {
+    button.addEventListener(
+      "click",
+      () => {
 
-      const conversion =
-        popularConversions[
-          button.dataset.conversion
-        ];
-
-
-      if (!conversion) return;
-
-
-      categorySelect.value =
-        conversion[0];
+        const conversion =
+          popularConversions[
+            button.dataset.conversion
+          ];
 
 
-      loadUnits();
+        if (!conversion) {
+          return;
+        }
 
 
-      fromUnitSelect.value =
-        conversion[1];
+        categorySelect.value =
+          conversion[0];
 
 
-      toUnitSelect.value =
-        conversion[2];
+        loadUnits();
 
 
-      calculate();
+        fromUnitSelect.value =
+          conversion[1];
 
 
-      document
-        .getElementById("converter")
-        .scrollIntoView({
-          behavior: "smooth"
-        });
+        toUnitSelect.value =
+          conversion[2];
 
 
-      inputValue.focus();
+        calculate();
 
-    });
+
+        const converter =
+          document.getElementById(
+            "converter"
+          );
+
+
+        if (converter) {
+
+          converter.scrollIntoView({
+            behavior: "smooth"
+          });
+
+        }
+
+
+        inputValue.focus();
+
+      }
+    );
 
   });
 
