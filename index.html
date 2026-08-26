@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Convert Everything - Free Unit Converter</title>
+  <meta name="description" content="Free online unit converter for length, weight, temperature, volume, speed, area, time, cooking and more.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container header-content">
+    <a href="index.html" class="logo">Convert Everything</a>
+
+    <nav>
+      <a href="#converter">Converter</a>
+      <a href="#categories">Categories</a>
+      <a href="#popular">Popular</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Convert Anything. Instantly.</h1>
+
+      <p>
+        Fast, simple and accurate unit conversions for everyday life,
+        work, school, cooking and more.
+      </p>
+
+      <div class="converter-card" id="converter">
+
+        <label for="category">Conversion Category</label>
+
+        <select id="category"></select>
+
+        <div class="conversion-row">
+
+          <div class="conversion-box">
+            <label for="fromUnit">From</label>
+            <select id="fromUnit"></select>
+
+            <input
+              type="number"
+              id="inputValue"
+              placeholder="Enter value"
+              step="any"
+            >
+          </div>
+
+          <button id="swapButton" class="swap-button" title="Swap units">
+            ⇄
+          </button>
+
+          <div class="conversion-box">
+            <label for="toUnit">To</label>
+            <select id="toUnit"></select>
+
+            <div class="result-box" id="result">
+              0
+            </div>
+          </div>
+
+        </div>
+
+        <div class="button-row">
+          <button id="copyButton" class="primary-button">
+            Copy Result
+          </button>
+
+          <button id="clearButton" class="secondary-button">
+            Clear
+          </button>
+        </div>
+
+        <div id="copyMessage" class="message"></div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="categories" class="section">
+    <div class="container">
+
+      <h2>Conversion Categories</h2>
+
+      <div class="category-grid">
+
+        <button class="category-card" data-category="length">
+          📏 Length
+        </button>
+
+        <button class="category-card" data-category="area">
+          ▦ Area
+        </button>
+
+        <button class="category-card" data-category="mass">
+          ⚖️ Weight & Mass
+        </button>
+
+        <button class="category-card" data-category="temperature">
+          🌡️ Temperature
+        </button>
+
+        <button class="category-card" data-category="volume">
+          🥛 Volume
+        </button>
+
+        <button class="category-card" data-category="time">
+          ⏱️ Time
+        </button>
+
+        <button class="category-card" data-category="speed">
+          🚗 Speed
+        </button>
+
+        <button class="category-card" data-category="pressure">
+          🔵 Pressure
+        </button>
+
+        <button class="category-card" data-category="energy">
+          ⚡ Energy
+        </button>
+
+        <button class="category-card" data-category="power">
+          🔌 Power
+        </button>
+
+        <button class="category-card" data-category="digital">
+          💾 Digital Storage
+        </button>
+
+        <button class="category-card" data-category="angle">
+          📐 Angle
+        </button>
+
+        <button class="category-card" data-category="cooking">
+          🍳 Cooking
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="popular" class="section popular-section">
+    <div class="container">
+
+      <h2>Popular Conversions</h2>
+
+      <div class="popular-grid">
+
+        <button data-conversion="miles-kilometers">
+          Miles → Kilometers
+        </button>
+
+        <button data-conversion="kilometers-miles">
+          Kilometers → Miles
+        </button>
+
+        <button data-conversion="pounds-kilograms">
+          Pounds → Kilograms
+        </button>
+
+        <button data-conversion="kilograms-pounds">
+          Kilograms → Pounds
+        </button>
+
+        <button data-conversion="feet-meters">
+          Feet → Meters
+        </button>
+
+        <button data-conversion="meters-feet">
+          Meters → Feet
+        </button>
+
+        <button data-conversion="fahrenheit-celsius">
+          Fahrenheit → Celsius
+        </button>
+
+        <button data-conversion="celsius-fahrenheit">
+          Celsius → Fahrenheit
+        </button>
+
+        <button data-conversion="cups-milliliters">
+          Cups → Milliliters
+        </button>
+
+        <button data-conversion="liters-gallons">
+          Liters → Gallons
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container information">
+
+      <h2>Why Use Convert Everything?</h2>
+
+      <div class="features">
+
+        <div>
+          <h3>Fast</h3>
+          <p>Conversions happen instantly as you enter a value.</p>
+        </div>
+
+        <div>
+          <h3>Free</h3>
+          <p>Use our basic conversion tools without an account.</p>
+        </div>
+
+        <div>
+          <h3>Simple</h3>
+          <p>No complicated formulas to remember.</p>
+        </div>
+
+        <div>
+          <h3>Mobile Friendly</h3>
+          <p>Designed to work on phones, tablets and computers.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer>
+  <div class="container">
+
+    <h3>Convert Everything</h3>
+
+    <p>
+      Simple tools for everyday calculations and conversions.
+    </p>
+
+    <div class="footer-links">
+      <a href="#converter">Converters</a>
+      <a href="#categories">Categories</a>
+      <a href="#popular">Popular</a>
+    </div>
+
+    <p class="copyright">
+      © 2026 Convert Everything
+    </p>
+
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
