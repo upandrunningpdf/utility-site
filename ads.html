@@ -288,3 +288,535 @@ body {
 
 </body>
 </html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lipstick Color Ad</title>
+
+<style>
+
+/* =========================================
+   PAGE
+========================================= */
+
+body {
+    margin: 0;
+    padding: 15px;
+    background: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+/* =========================================
+   DIVIDERS
+========================================= */
+
+.divider {
+    width: 90%;
+    height: 2px;
+    background: #222;
+    margin: 10px auto;
+}
+
+
+/* =========================================
+   SMALL AD
+========================================= */
+
+.ad {
+    width: 260px;
+    height: 230px;
+    margin: 15px auto;
+    position: relative;
+}
+
+
+/* =========================================
+   SVG
+========================================= */
+
+svg {
+    width: 260px;
+    height: 230px;
+    overflow: visible;
+}
+
+
+/* =========================================
+   LIPS
+========================================= */
+
+.lips {
+    transform-origin: center;
+}
+
+
+/* Upper lip */
+
+.upper-lip {
+    fill: var(--lip-color);
+    stroke: #5c0716;
+    stroke-width: 2;
+}
+
+
+/* Lower lip */
+
+.lower-lip {
+    fill: var(--lip-color);
+    stroke: #5c0716;
+    stroke-width: 2;
+}
+
+
+/* Lip highlight */
+
+.highlight {
+    fill: rgba(255,255,255,.35);
+}
+
+
+/* =========================================
+   LIPSTICK
+========================================= */
+
+.lipstick {
+    transform-origin: center;
+    animation: applyLipstick 6s infinite ease-in-out;
+}
+
+
+/* =========================================
+   LIPSTICK MOVEMENT
+========================================= */
+
+@keyframes applyLipstick {
+
+    /* Start away from lips */
+
+    0% {
+        transform:
+        translate(0px, -20px)
+        rotate(-25deg);
+    }
+
+    /* Move toward lower lip */
+
+    12% {
+        transform:
+        translate(55px, 45px)
+        rotate(-20deg);
+    }
+
+    /* Touch left side */
+
+    22% {
+        transform:
+        translate(70px, 75px)
+        rotate(-18deg);
+    }
+
+    /* Sweep across lower lip */
+
+    42% {
+        transform:
+        translate(145px, 72px)
+        rotate(-5deg);
+    }
+
+    /* Continue across */
+
+    55% {
+        transform:
+        translate(190px, 68px)
+        rotate(10deg);
+    }
+
+    /* Lift away */
+
+    68% {
+        transform:
+        translate(215px, 25px)
+        rotate(25deg);
+    }
+
+    /* Stay away */
+
+    78% {
+        transform:
+        translate(215px, 25px)
+        rotate(25deg);
+    }
+
+    /* Return */
+
+    100% {
+        transform:
+        translate(0px, -20px)
+        rotate(-25deg);
+    }
+}
+
+
+/* =========================================
+   LIP COLOR APPLICATION
+========================================= */
+
+.color-fill {
+    animation: applyColor 6s infinite;
+}
+
+
+/* Color gradually appears */
+
+@keyframes applyColor {
+
+    0% {
+        opacity: 0;
+    }
+
+    18% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: .25;
+    }
+
+    45% {
+        opacity: .55;
+    }
+
+    58% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   COLOR SWATCH
+========================================= */
+
+.swatch {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 3px auto 5px;
+
+    background: #d81b60;
+
+    animation: swatchChange 24s infinite;
+}
+
+
+@keyframes swatchChange {
+
+    0%, 24% {
+        background: #d81b60;
+    }
+
+    25%, 49% {
+        background: #e53935;
+    }
+
+    50%, 74% {
+        background: #8e24aa;
+    }
+
+    75%, 100% {
+        background: #f4511e;
+    }
+}
+
+
+/* =========================================
+   COLOR NAME
+========================================= */
+
+.color-name {
+    font-size: 14px;
+    font-weight: bold;
+    animation: nameChange 24s infinite;
+}
+
+
+@keyframes nameChange {
+
+    0%, 24% {
+        color: #d81b60;
+    }
+
+    25%, 49% {
+        color: #e53935;
+    }
+
+    50%, 74% {
+        color: #8e24aa;
+    }
+
+    75%, 100% {
+        color: #f4511e;
+    }
+}
+
+
+/* =========================================
+   AD MESSAGE
+========================================= */
+
+.message {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.back {
+    margin: 10px;
+}
+
+.back a {
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .ad {
+        transform: scale(.9);
+        margin: 5px auto;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================================
+     TOP DIVIDER
+========================================= -->
+
+<div class="divider"></div>
+
+<!-- =========================================
+     SMALL LIPSTICK AD
+========================================= -->
+
+<div class="ad">
+
+<svg viewBox="0 0 260 230">
+
+```
+<defs>
+
+    <!-- Lip shape mask -->
+
+    <mask id="lipMask">
+
+        <rect
+            width="260"
+            height="230"
+            fill="black"
+        />
+
+        <path
+            d="M65 120
+               Q85 105 110 115
+               Q130 100 150 115
+               Q175 105 195 120
+               Q175 135 150 138
+               Q130 145 110 138
+               Q85 135 65 120Z"
+            fill="white"
+        />
+
+    </mask>
+
+</defs>
+
+
+<!-- =====================================
+     ONE PAIR OF LIPS
+====================================== -->
+
+<g class="lips">
+
+
+    <!-- Upper lip -->
+
+    <path
+        class="upper-lip"
+        d="M65 120
+           Q85 102 110 114
+           Q130 97 150 114
+           Q175 102 195 120
+           Q170 123 150 126
+           Q130 120 110 126
+           Q85 123 65 120Z"
+    />
+
+
+    <!-- Lower lip -->
+
+    <path
+        class="lower-lip"
+        d="M65 120
+           Q90 128 110 126
+           Q130 120 150 126
+           Q175 128 195 120
+           Q180 151 130 158
+           Q80 151 65 120Z"
+    />
+
+
+    <!-- Lip shine -->
+
+    <ellipse
+        class="highlight"
+        cx="135"
+        cy="143"
+        rx="25"
+        ry="5"
+    />
+
+</g>
+
+
+<!-- =====================================
+     COLOR BEING APPLIED
+====================================== -->
+
+<g class="color-fill"
+   mask="url(#lipMask)">
+
+    <rect
+        x="50"
+        y="95"
+        width="160"
+        height="70"
+        fill="#d81b60"
+    />
+
+</g>
+
+
+<!-- =====================================
+     LIPSTICK
+====================================== -->
+
+<g class="lipstick">
+
+    <!-- Gold lipstick tube -->
+
+    <rect
+        x="15"
+        y="20"
+        width="30"
+        height="75"
+        rx="5"
+        fill="#d4af37"
+    />
+
+    <!-- Gold shine -->
+
+    <rect
+        x="20"
+        y="25"
+        width="5"
+        height="65"
+        fill="#fff4b0"
+        opacity=".65"
+    />
+
+    <!-- Lipstick bullet -->
+
+    <path
+        d="M15 20
+           L20 5
+           Q28 -3 37 7
+           L45 20Z"
+        fill="#d81b60"
+    />
+
+    <!-- Lipstick shine -->
+
+    <path
+        d="M23 15
+           L27 7
+           L31 7
+           L28 18Z"
+        fill="#ff9ab8"
+        opacity=".7"
+    />
+
+</g>
+```
+
+</svg>
+
+</div>
+
+<!-- =========================================
+     COLOR SWATCH
+========================================= -->
+
+<div class="swatch"></div>
+
+<div class="color-name">
+    Lip Color
+</div>
+
+<div class="message">
+    Find Your Perfect Color 💄
+</div>
+
+<!-- =========================================
+     BACK TO MAIN PAGE
+========================================= -->
+
+<div class="back">
+
+```
+<a href="index.html">
+    ← Back to Main Page
+</a>
+```
+
+</div>
+
+<!-- =========================================
+     BOTTOM DIVIDER
+========================================= -->
+
+<div class="divider"></div>
+
+</body>
+</html>
