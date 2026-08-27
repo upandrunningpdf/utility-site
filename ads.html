@@ -820,3 +820,838 @@ svg {
 
 </body>
 </html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roots Hair Ad</title>
+
+<style>
+
+/* =========================================
+   PAGE
+========================================= */
+
+body {
+    margin: 0;
+    padding: 15px;
+    background: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   DIVIDERS
+========================================= */
+
+.divider {
+    width: 90%;
+    height: 3px;
+    background: #222;
+    margin: 10px auto;
+}
+
+
+/* =========================================
+   SMALL AD AREA
+========================================= */
+
+.ad {
+    position: relative;
+    width: 360px;
+    height: 300px;
+    max-width: 95vw;
+    margin: 15px auto;
+    overflow: hidden;
+    background: #fff;
+}
+
+
+/* =========================================
+   GROUND
+========================================= */
+
+.ground {
+    position: absolute;
+    bottom: 38px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #555;
+}
+
+
+/* =========================================
+   MAN
+========================================= */
+
+.man {
+    position: absolute;
+    left: 145px;
+    bottom: 42px;
+    width: 70px;
+    height: 170px;
+    z-index: 4;
+}
+
+
+/* Head */
+
+.head {
+    position: absolute;
+    left: 13px;
+    top: 0;
+    width: 44px;
+    height: 52px;
+    background: #b8754c;
+    border-radius: 45% 45% 48% 48%;
+    z-index: 3;
+}
+
+
+/* Face */
+
+.face {
+    position: absolute;
+    left: 13px;
+    top: 0;
+    width: 44px;
+    height: 52px;
+    z-index: 4;
+}
+
+
+/* Eyes */
+
+.eye {
+    position: absolute;
+    top: 19px;
+    width: 5px;
+    height: 5px;
+    background: #222;
+    border-radius: 50%;
+}
+
+.eye.left {
+    left: 10px;
+}
+
+.eye.right {
+    right: 10px;
+}
+
+
+/* Nose */
+
+.nose {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    width: 5px;
+    height: 8px;
+    border-right: 2px solid #75452f;
+    border-radius: 50%;
+}
+
+
+/* Smile */
+
+.smile {
+    position: absolute;
+    left: 13px;
+    top: 37px;
+    width: 18px;
+    height: 7px;
+    border-bottom: 2px solid #54281e;
+    border-radius: 50%;
+}
+
+
+/* Body */
+
+.body {
+    position: absolute;
+    left: 12px;
+    top: 52px;
+    width: 47px;
+    height: 70px;
+    background: #286090;
+    border-radius: 15px 15px 5px 5px;
+}
+
+
+/* Arms */
+
+.arm {
+    position: absolute;
+    width: 12px;
+    height: 62px;
+    background: #b8754c;
+    border-radius: 10px;
+    top: 55px;
+}
+
+.arm.left {
+    left: 2px;
+    transform: rotate(12deg);
+}
+
+.arm.right {
+    right: 2px;
+    transform: rotate(-12deg);
+}
+
+
+/* Legs */
+
+.leg {
+    position: absolute;
+    width: 15px;
+    height: 65px;
+    background: #333;
+    top: 118px;
+    border-radius: 5px;
+}
+
+.leg.left {
+    left: 17px;
+}
+
+.leg.right {
+    right: 17px;
+}
+
+
+/* =========================================
+   HAIR
+========================================= */
+
+.hair {
+    position: absolute;
+    left: 5px;
+    top: -9px;
+    width: 60px;
+    height: 42px;
+    z-index: 5;
+
+    opacity: 0;
+
+    background: #17110d;
+
+    border-radius:
+        50% 50% 35% 35%;
+
+    transform: scale(.25);
+
+    animation: growHair 8s infinite;
+}
+
+
+/* Individual hair spikes */
+
+.hair::before,
+.hair::after {
+    content: "";
+    position: absolute;
+    background: #17110d;
+}
+
+.hair::before {
+    width: 65px;
+    height: 20px;
+    left: -3px;
+    top: -7px;
+    border-radius: 50%;
+}
+
+.hair::after {
+    width: 15px;
+    height: 35px;
+    right: -4px;
+    top: 5px;
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   HAIR GROWTH
+========================================= */
+
+@keyframes growHair {
+
+    0%,
+    25% {
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(.35);
+    }
+
+    38% {
+        transform: scale(.65);
+    }
+
+    46% {
+        transform: scale(1.15);
+    }
+
+    55%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================
+   ROOTS BOTTLE
+========================================= */
+
+.bottle {
+    position: absolute;
+
+    left: 42px;
+    bottom: 45px;
+
+    width: 42px;
+    height: 78px;
+
+    z-index: 8;
+
+    transform-origin: bottom center;
+
+    animation: bottleAction 8s infinite;
+}
+
+
+/* Bottle body */
+
+.bottle-body {
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+
+    width: 36px;
+    height: 60px;
+
+    background: #176b3a;
+
+    border-radius: 7px 7px 10px 10px;
+
+    border: 2px solid #123d26;
+}
+
+
+/* Bottle label */
+
+.label {
+    position: absolute;
+    left: 6px;
+    top: 25px;
+
+    width: 30px;
+    height: 25px;
+
+    background: #f7d34b;
+
+    font-size: 7px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #222;
+}
+
+
+/* Bottle cap */
+
+.cap {
+    position: absolute;
+    left: 10px;
+    top: 0;
+
+    width: 25px;
+    height: 20px;
+
+    background: #d5a928;
+
+    border-radius: 4px 4px 2px 2px;
+}
+
+
+/* =========================================
+   BOTTLE FALL / PICKUP
+========================================= */
+
+@keyframes bottleAction {
+
+    /* Bottle appears above */
+
+    0% {
+        left: 180px;
+        bottom: 230px;
+        transform: rotate(-20deg);
+    }
+
+    /* Falls */
+
+    12% {
+        left: 165px;
+        bottom: 45px;
+        transform: rotate(25deg);
+    }
+
+    /* Lies at feet */
+
+    25% {
+        left: 125px;
+        bottom: 45px;
+        transform: rotate(90deg);
+    }
+
+    /* Man reaches for it */
+
+    38% {
+        left: 132px;
+        bottom: 70px;
+        transform: rotate(20deg);
+    }
+
+    /* Bottle lifted */
+
+    48% {
+        left: 130px;
+        bottom: 125px;
+        transform: rotate(0deg);
+    }
+
+    /* Held up */
+
+    60% {
+        left: 128px;
+        bottom: 135px;
+        transform: rotate(0deg);
+    }
+
+    /* Move away */
+
+    70% {
+        left: 190px;
+        bottom: 100px;
+        transform: rotate(0deg);
+    }
+
+    /* Reset */
+
+    100% {
+        left: 180px;
+        bottom: 230px;
+        transform: rotate(-20deg);
+    }
+}
+
+
+/* =========================================
+   WOMEN
+========================================= */
+
+.women {
+    position: absolute;
+
+    left: -180px;
+    bottom: 40px;
+
+    display: flex;
+    gap: 10px;
+
+    z-index: 7;
+
+    animation: womenChase 8s infinite;
+}
+
+
+/* Woman */
+
+.woman {
+    position: relative;
+
+    width: 55px;
+    height: 145px;
+}
+
+
+/* Woman head */
+
+.woman-head {
+    position: absolute;
+
+    left: 12px;
+    top: 5px;
+
+    width: 38px;
+    height: 43px;
+
+    background: #b97850;
+
+    border-radius: 50%;
+
+    z-index: 3;
+}
+
+
+/* Woman hair */
+
+.woman-hair {
+    position: absolute;
+
+    left: 5px;
+    top: -5px;
+
+    width: 52px;
+    height: 58px;
+
+    background: #21150f;
+
+    border-radius: 50%;
+
+    z-index: 2;
+}
+
+
+/* Woman body */
+
+.woman-body {
+    position: absolute;
+
+    left: 7px;
+    top: 48px;
+
+    width: 44px;
+    height: 60px;
+
+    background: #c83262;
+
+    border-radius: 18px 18px 5px 5px;
+}
+
+
+/* Woman legs */
+
+.woman-leg {
+    position: absolute;
+
+    top: 105px;
+
+    width: 12px;
+    height: 40px;
+
+    background: #333;
+
+    border-radius: 5px;
+}
+
+.woman-leg.left {
+    left: 14px;
+}
+
+.woman-leg.right {
+    right: 14px;
+}
+
+
+/* =========================================
+   WOMEN RUN AFTER MAN
+========================================= */
+
+@keyframes womenChase {
+
+    0%,
+    58% {
+        left: -180px;
+    }
+
+    70% {
+        left: -80px;
+    }
+
+    82% {
+        left: 20px;
+    }
+
+    92% {
+        left: 65px;
+    }
+
+    100% {
+        left: -180px;
+    }
+}
+
+
+/* =========================================
+   SPEED LINES
+========================================= */
+
+.speed {
+    position: absolute;
+
+    width: 25px;
+    height: 2px;
+
+    background: #555;
+
+    opacity: 0;
+
+    animation: speedLines 8s infinite;
+}
+
+.speed.one {
+    top: 205px;
+    left: 15px;
+}
+
+.speed.two {
+    top: 220px;
+    left: 5px;
+}
+
+@keyframes speedLines {
+
+    0%,
+    65% {
+        opacity: 0;
+    }
+
+    75%,
+    92% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   AD MESSAGE
+========================================= */
+
+.message {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.back {
+    margin: 12px;
+}
+
+.back a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .ad {
+        transform: scale(.9);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- TOP DIVIDER -->
+
+<div class="divider"></div>
+
+<!-- =========================================
+     ANIMATED AD
+========================================= -->
+
+<div class="ad">
+
+```
+<!-- GROUND -->
+
+<div class="ground"></div>
+
+
+<!-- SPEED LINES -->
+
+<div class="speed one"></div>
+<div class="speed two"></div>
+
+
+<!-- =====================================
+     MAN
+====================================== -->
+
+<div class="man">
+
+    <div class="head">
+
+        <div class="face">
+
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+
+            <div class="nose"></div>
+
+            <div class="smile"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HAIR -->
+
+    <div class="hair"></div>
+
+
+    <!-- BODY -->
+
+    <div class="body"></div>
+
+
+    <!-- ARMS -->
+
+    <div class="arm left"></div>
+    <div class="arm right"></div>
+
+
+    <!-- LEGS -->
+
+    <div class="leg left"></div>
+    <div class="leg right"></div>
+
+</div>
+
+
+<!-- =====================================
+     ROOTS BOTTLE
+====================================== -->
+
+<div class="bottle">
+
+    <div class="cap"></div>
+
+    <div class="bottle-body">
+
+        <div class="label">
+            ROOTS
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================
+     WOMEN
+====================================== -->
+
+<div class="women">
+
+
+    <div class="woman">
+
+        <div class="woman-hair"></div>
+        <div class="woman-head"></div>
+
+        <div class="woman-body"></div>
+
+        <div class="woman-leg left"></div>
+        <div class="woman-leg right"></div>
+
+    </div>
+
+
+    <div class="woman">
+
+        <div class="woman-hair"></div>
+        <div class="woman-head"></div>
+
+        <div class="woman-body"></div>
+
+        <div class="woman-leg left"></div>
+        <div class="woman-leg right"></div>
+
+    </div>
+
+
+    <div class="woman">
+
+        <div class="woman-hair"></div>
+        <div class="woman-head"></div>
+
+        <div class="woman-body"></div>
+
+        <div class="woman-leg left"></div>
+        <div class="woman-leg right"></div>
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- =========================================
+     MESSAGE
+========================================= -->
+
+<div class="message">
+    ROOTS — When the hair comes back, everybody notices! 😎
+</div>
+
+<!-- BACK TO MAIN PAGE -->
+
+<div class="back">
+
+```
+<a href="index.html">
+    ← Back to Main Page
+</a>
+```
+
+</div>
+
+<!-- BOTTOM DIVIDER -->
+
+<div class="divider"></div>
+
+</body>
+</html>
+
