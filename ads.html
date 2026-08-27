@@ -98,3 +98,193 @@
 <!-- ==================================================
      END — LIPSTICK ANIMATION
      ================================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lipstick Ad</title>
+
+<style>
+
+/* ================================
+   PAGE
+================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+/* ================================
+   TOP DIVIDER
+================================ */
+
+.divider {
+    width: 90%;
+    height: 2px;
+    background: #222;
+    margin: 15px auto;
+}
+
+
+/* ================================
+   SMALL AD
+================================ */
+
+.ad-box {
+    width: 180px;
+    height: 180px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ================================
+   LIPS ICON
+================================ */
+
+.lips {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+
+    animation: lipstickColors 8s infinite;
+}
+
+
+/* ================================
+   COLOR CHANGING
+================================ */
+
+@keyframes lipstickColors {
+
+    0% {
+        filter:
+        sepia(1)
+        saturate(8)
+        hue-rotate(320deg);
+    }
+
+    25% {
+        filter:
+        sepia(1)
+        saturate(8)
+        hue-rotate(0deg);
+    }
+
+    50% {
+        filter:
+        sepia(1)
+        saturate(8)
+        hue-rotate(30deg);
+    }
+
+    75% {
+        filter:
+        sepia(1)
+        saturate(8)
+        hue-rotate(280deg);
+    }
+
+    100% {
+        filter:
+        sepia(1)
+        saturate(8)
+        hue-rotate(320deg);
+    }
+
+}
+
+
+/* ================================
+   AD TEXT
+================================ */
+
+.ad-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* ================================
+   MAIN PAGE LINK
+================================ */
+
+.back {
+    margin: 15px;
+}
+
+.back a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+}
+
+
+/* ================================
+   BOTTOM DIVIDER
+================================ */
+
+.divider-bottom {
+    width: 90%;
+    height: 2px;
+    background: #222;
+    margin: 15px auto;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- TOP DIVIDER -->
+
+<div class="divider"></div>
+
+
+<!-- SMALL LIPSTICK AD -->
+
+<div class="ad-box">
+
+    <img
+        src="lips.png"
+        class="lips"
+        alt="Lipstick"
+    >
+
+</div>
+
+
+<div class="ad-text">
+    Find Your Perfect Lip Color 💄
+</div>
+
+
+<!-- BACK TO MAIN PAGE -->
+
+<div class="back">
+    <a href="index.html">
+        ← Back to Main Page
+    </a>
+</div>
+
+
+<!-- BOTTOM DIVIDER -->
+
+<div class="divider-bottom"></div>
+
+
+</body>
+</html>
