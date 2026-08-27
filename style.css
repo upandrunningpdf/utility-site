@@ -458,3 +458,64 @@ footer p {
   font-size: 1rem;
   font-weight: 700;
 }
+/* ==================================================
+   LIPSTICK ICON AD
+   ================================================== */
+
+.lipstick-icon-ad {
+  width: 140px;
+  height: 140px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* NO BORDER */
+  border: none;
+
+  /* NO CIRCLE */
+  background: transparent;
+
+  overflow: visible;
+
+  animation: lipstickFloat 3s ease-in-out infinite;
+}
+
+.lipstick-icon-ad img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  /* NO BORDER */
+  border: none;
+
+  /* NO BACKGROUND */
+  background: transparent;
+
+  object-fit: contain;
+}
+
+
+/* Gentle movement */
+
+@keyframes lipstickFloat {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+
+/* ==================================================
+   END LIPSTICK ICON AD
+   ================================================== */
